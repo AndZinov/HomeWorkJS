@@ -8,4 +8,4 @@ if (userLogin === existingUserLogin && userPassword === existingUserPassword){
     alert(`You are welcome ${userLogin} !`);
 } else {
     alert ('Login and (or) Password entered incorrectly!');
-}the_best
+}

@@ -18,46 +18,46 @@ let incorrectAsnwer = 0;
 let userAnswer1 = prompt(question1);
 userAnswer1 = Number(userAnswer1);
 if (userAnswer1 === answer1){
-    alert('Answer Right'),
+    alert('Answer Right')
     correctAnswer ++;
 } else {
-    alert ('Answer incorrect'),
+    alert ('Answer incorrect')
     incorrectAsnwer ++;
 }
 let userAnswer2 = prompt(question2);
 userAnswer2 = Number(userAnswer2); 
 if (userAnswer2 === answer2){
-    alert('Answer Right'),
+    alert('Answer Right')
     correctAnswer ++;
 } else {
-    alert ('Answer incorrect'),
+    alert ('Answer incorrect')
     incorrectAsnwer ++;
 }
 let userAnswer3 = prompt(question3);
 userAnswer3 = Number(userAnswer3); 
 if (userAnswer3 === answer3){
-    alert('Answer Right'),
+    alert('Answer Right')
     correctAnswer ++;
 } else {
-    alert ('Answer incorrect'),
+    alert ('Answer incorrect')
     incorrectAsnwer ++;
 }
 let userAnswer4 = prompt(question4);
 userAnswer4 = Number(userAnswer4); 
 if (userAnswer4 === answer4){
-    alert('Answer Right'),
+    alert('Answer Right')
     correctAnswer ++;
 } else {
-    alert ('Answer incorrect'),
+    alert ('Answer incorrect')
     incorrectAsnwer ++;
 }
 let userAnswer5 = prompt(question5);
 userAnswer5 = Number(userAnswer5);
 if (userAnswer5 === answer5){
-    alert('Answer Right'),
+    alert('Answer Right')
     correctAnswer ++;
 } else {
-    alert ('Answer incorrect'),
+    alert ('Answer incorrect')
     incorrectAsnwer ++;
 }
 
