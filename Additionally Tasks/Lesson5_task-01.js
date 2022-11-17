@@ -15,3 +15,4 @@ let withoutSpace = replaceInString.trim().replaceAll(' ', '')
 console.log(withoutSpace.repeat(3))
 
 console.log(JavaScriptDescription[middleString]);
+
