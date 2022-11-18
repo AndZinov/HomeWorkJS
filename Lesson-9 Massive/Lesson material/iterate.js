@@ -93,3 +93,34 @@ const sum = salaryOfDevelopers.reduce((acc, salary, index, array) => {
 },0);
 
 console.log(sum)
+
+
+//sort 
+// < 0
+// > 0
+// 0
+
+salaryOfDevelopers.sort((a,b) =>{
+    return b - a;
+});
+console.log(salaryOfDevelopers)
+
+//Если не задавать callback то переводит из числа в строку и сортирует строку по возрастанию
+
+400
+'400'
+
+salaryOfDevelopers.sort();
+console.log(salaryOfDevelopers)
+
+const developerNames = ['Кристина', 'Олег', 'Кирилл', 'Мария'];
+developerNames.sort((a,b) => {
+    if(a > b){
+        return 1;
+    }
+    if(a < b){
+        return -1;
+    }
+    return 0;
+});
+console.log(developerNames)
