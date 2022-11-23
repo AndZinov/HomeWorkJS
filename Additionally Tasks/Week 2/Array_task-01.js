@@ -1,4 +1,5 @@
 const goals = [8, 1, 1, 3, 2, -1, 5]; 
+console.log(...goals)
 //1
 //Создаю массив через мар, чтобы не изменять основной массив сортировкой
 const arrayForSort = goals.map((item) =>{
