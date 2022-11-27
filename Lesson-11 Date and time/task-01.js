@@ -12,3 +12,22 @@ const getDateFormat = (date,separator = '.') => {
 const dateNow = new Date();
 getDateFormat(dateNow, '-')
 
+/*
+const addZero = (num) =>
+  String(num).length === 1 ? `0${num}` : String(num);
+  
+const getDateFormat = (date, separator = ".") => {
+    //для проверки является ли дата датой
+  if (!(date instanceof Date)) {
+    return "Первый параметр должен быть экземпляром класса Date!";
+  }
+  const dateItem = date.getDate();
+  const monthIndex = date.getMonth();
+  const year = date.getFullYear();
+
+  return [dateItem, monthIndex + 1, year]
+    .map(addZero)
+    .join(separator);
+};
+
+console.log(getDateFormat(new Date())); */

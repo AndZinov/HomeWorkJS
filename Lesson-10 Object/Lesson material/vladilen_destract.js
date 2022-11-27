@@ -9,15 +9,15 @@ function calcValues(a,b) {
 
 
 //Деструктуризация с массивами
-/*
+
 
 // console.log(calcValues(42, 34))
-const [sum,sub = 'Вычитания неты', mult, ...other] = calcValues(42, 34)
+const [sum,sub = 'Вычитания неты', mult, ...other] = calcValues(42, 34);
 // const sum = result[0];
 // const sub = result[1];
 // const [sum, sub]= result
 
-console.log(sum, mult, other, sub) */
+console.log(sum, mult, other, sub)
 
 //Деструктуризация с объектами
 
