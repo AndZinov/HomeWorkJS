@@ -34,3 +34,22 @@ const getKiller = (suspectInfo, deadPeople) => {
     })
 }
 getKiller(killerInfo,people)
+console.log(Object.entries(killerInfo))
+
+
+/* Решение от школы
+
+function getKiller(suspectInfo, deadPeople) {
+    let killerName = "";
+    Object.entries(suspectInfo).forEach(([suspectPerson, peopleWereSeen]) => {
+      const isKiller = deadPeople.every((deadName) =>
+        peopleWereSeen.includes(deadName)
+      );
+      if (isKiller) {
+        killerName = suspectPerson;
+      }
+    });
+  
+    return killerName;
+  }
+  */

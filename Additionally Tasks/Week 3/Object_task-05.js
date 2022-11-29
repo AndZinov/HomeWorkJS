@@ -42,17 +42,37 @@ const usersObject = {
         return console.log(filterArray)
     } else {
         const arrayKey = Object.keys(users);
-        const newObject = {};
-        const filterObject = arrayKey.forEach((key) => {
-        const {age} = users[key];
-        if (age >= 18) {
-            newObject[key] = users[key]
-            return newObject
-        }
-        },{});
-        return console.log('New Object',newObject)
+        const filterArrat = arrayKey.filter(key => {
+          const {age} = users[key];
+          return age >= 18
+        })
+        const result = filterArrat.reduce((acc, key) => {
+          acc[key] = users[key]
+          return acc 
+        }, {})
+        return console.log(result)
+       
     }
   }
 
 getAdultUsers(usersObject)
 
+
+/*Решение от школы 
+
+function getAdultUsers(users) {
+  if (typeof users === "object" && users !== null) {
+    return Array.isArray(users)
+      ? users.filter((u) => u.age >= 18)
+      : Object.keys(users)
+          .filter((key) => users[key].age >= 18)
+          .reduce((acc, key) => {
+            acc[key] = users[key];
+            return acc;
+          }, {});
+  } else {
+    return [];
+  }
+}
+
+console.log(getAdultUsers(usersArray)); */

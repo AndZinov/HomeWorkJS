@@ -36,12 +36,30 @@ const allowVisa = (clients) => {
         // console.log(passportExpiration)
         const date = new Date(makeRightDate(passportExpiration))
         // console.log(date)
-        return date.getTime() > Date.now() && criminalRecord
+        return date.getTime() > Date.now() && !criminalRecord
     });
     return rightClient
 };
 
 const result = allowVisa(peopleWithVisa);
 console.log('result', result);
+
+/* Решение от школы :
+
+const allowVisa = (people) => {
+  return people.filter((person) => {
+    const splittedExpirationDate = person.passportExpiration.split(".");
+    const year = splittedExpirationDate.at(-1); // Возвращает последний элемент массива
+    const month = splittedExpirationDate[1];
+    const date = splittedExpirationDate[0];
+    const passportExpirationDate = new Date(year, month - 1, date);
+    return (
+      passportExpirationDate.getTime() > Date.now() && !person.criminalRecord
+    );
+  });
+};
+
+console.log(allowVisa(peopleWithVisa));
+*/
 
 
