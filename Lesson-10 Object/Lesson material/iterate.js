@@ -10,7 +10,7 @@ console.log('goodInfo', goodInfo)
 //for in
 
 for (const key in goodInfo){
-    console.log(key);
+    console.log('key1',key);
     const value = goodInfo[key];
     console.log(value);
 } 
