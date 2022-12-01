@@ -81,9 +81,9 @@ bind(info, person, '12323', 'dfs@ndsk@.ru')() //Name:, Andrey, Phone: 1234, Emai
 
 //Call
 function call(fn,context, ...args){
-    const uniqId = Date.now().toString()
+    const uniqId = Date.now().toString() //Создаем уникальный ID
 
-    context[uniqId] = fn
+    context[uniqId] = fn //Присваем этот уникальный ID
 
     const result = context[uniqId](...args);
 

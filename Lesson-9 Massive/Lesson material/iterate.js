@@ -92,7 +92,7 @@ const sum = salaryOfDevelopers.reduce((acc, salary, index, array) => {
     return acc + salary;
 },0);
 
-console.log(sum)
+console.log('Reduce',sum)
 
 
 //sort 
