@@ -33,6 +33,7 @@ class Developer {
 }
 
 const developer = new Developer ('Andrey', 'JavaScript')
+console.log('Test on see', developer)
 
 class JuniorDeveloper extends Developer {
     constructor (name, programmingLanguage) {
@@ -49,3 +50,4 @@ developer.setSalary = 5000 //Для передачи нового значени
 console.log(developer.devSalary)//5000
 
 console.log(Object.keys(developer))
+
