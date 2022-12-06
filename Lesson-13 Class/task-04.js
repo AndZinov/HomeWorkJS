@@ -59,3 +59,50 @@ hardWordsDictionary.add('квант', 'Неделимая часть какой-
 hardWordsDictionary.remove('неологизм');
     
 hardWordsDictionary.showAllWords();
+
+
+/* Решение от школы
+class Dictionary {
+  constructor(name) {
+    this.name = name;
+    this.words = {};
+  }
+
+  add(word, description) {
+    if (!this.words[word]) {
+      this.words[word] = {
+        word,
+        description
+      };
+    }
+  }
+
+  remove(word) {
+    delete this.words[word];
+  }
+
+  get(word) {
+    return this.words[word];
+  }
+
+  showAllWords() {
+    Object.values(this.words).forEach((wordItem) => {
+      console.log(`${wordItem.word} - ${wordItem.description}`);
+    });
+  }
+}
+
+class HardWordsDictionary extends Dictionary {
+  add(word, description) {
+    if (!this.words[word]) {
+      this.words[word] = {
+        word,
+        description,
+        isDifficult: true
+      };
+    }
+  }
+}
+
+
+*/

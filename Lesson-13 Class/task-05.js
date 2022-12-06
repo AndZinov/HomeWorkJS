@@ -16,6 +16,8 @@ class JuniorDeveloper extends Developer {
         super(fullName, age, 'Junior')
         const technologies = ['HTML', 'CSS', 'JavaScript','React'];
         technologies.forEach( tech => this.learnNewTechnologies(tech) )
+        // Можно было заменить две строчки выше на 
+        //this.technologies = ["HTML", "CSS", "JavaScript"];
     }
     code () {
         console.log(`Junior разработчик пишет код...`)
