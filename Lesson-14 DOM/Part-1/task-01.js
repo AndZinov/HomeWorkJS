@@ -59,3 +59,43 @@ label2.append(newInput2)
 newForm.insertAdjacentElement('beforeend', newButton)
 
 console.log(bodyInHTML) 
+
+
+/*Решение от школы 
+
+// 2-й способ
+const createInputWithLabel = (label, inputType, inputName, placeholder) => {
+  const labelContainer = document.createElement("label");
+  labelContainer.innerText = label;
+
+  const inputElement = document.createElement("input");
+  inputElement.type = inputType;
+  inputElement.name = inputName;
+  inputElement.placeholder = placeholder;
+
+  labelContainer.append(inputElement);
+
+  return labelContainer;
+};
+
+const formContainer = document.createElement("form");
+formContainer.className = "create-user-form";
+const userNameLabel = createInputWithLabel(
+  "Имя",
+  "text",
+  "userName",
+  "Введите ваше имя"
+);
+const passwordLabel = createInputWithLabel(
+  "Пароль",
+  "password",
+  "password",
+  "Придумайте Пароль"
+);
+const confirmButton = document.createElement("button");
+confirmButton.type = "submit";
+confirmButton.innerText = "Подтвердить";
+
+formContainer.append(userNameLabel, passwordLabel, confirmButton);
+document.body.prepend(formContainer);
+*/
