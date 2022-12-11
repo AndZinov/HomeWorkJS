@@ -34,20 +34,20 @@ class Developer {
 
 const developer = new Developer ('Andrey', 'JavaScript')
 console.log('Test on see', developer)
+console.log(developer.salary)
+// class JuniorDeveloper extends Developer {
+//     constructor (name, programmingLanguage) {
+//         super(name, programmingLanguage)
+//     }
+// }
+// const juniorDeveloper = new JuniorDeveloper ('Igot', 'JavaScript')
 
-class JuniorDeveloper extends Developer {
-    constructor (name, programmingLanguage) {
-        super(name, programmingLanguage)
-    }
-}
-const juniorDeveloper = new JuniorDeveloper ('Igot', 'JavaScript')
-
-developer.startCoding() //3000 Получение приватного поля через get 
-console.log(developer.devSalary)
+// developer.startCoding() 
+// console.log('geter',developer.devSalary) //3000 Получение приватного поля через get 
 
 
-developer.setSalary = 5000 //Для передачи нового значения через set
-console.log(developer.devSalary)//5000
+// developer.setSalary = 5000 //Для передачи нового значения через set
+// console.log('seter',developer.devSalary)//5000
 
-console.log(Object.keys(developer))
+// console.log(Object.keys(developer))
 
