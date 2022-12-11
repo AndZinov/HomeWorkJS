@@ -81,7 +81,7 @@ const getTotalPriceOfShoppingBag = (shoppingBagArray) => {
   
   console.log('Cost you purchase:', getTotalPriceOfShoppingBag(shoppingBag)) 
 
-  /*
+ 
   //Решение от Саши
 
   const sumOfProduct = shoppingBag.reduce((acc, {productId, count}) => { // из элемента сразу берем id и count
