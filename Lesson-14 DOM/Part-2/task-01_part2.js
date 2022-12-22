@@ -97,22 +97,27 @@ function pushObjectWithUniqueCod (object, value) {
 console.log(document.querySelector('body'))
 
 
-/* Пытался написать код для удаления по кнопке, решил оставить на потом 
-const allDeleteButton = document.querySelectorAll('.task-item__delete-button')
-allDeleteButton.forEach((button) => {
-    button.addEventListener('click', (event) => {
-        const idButton = button.dataset.deleteTaskId;
-        tasks.forEach(({id}, index) => {
-            if(id === idButton){
-                
-            }
-        })
-    
-    })
-})
+// Решение от школы 
+/*
+const createTaskForm = document.querySelector(".create-task-block");
+createTaskForm.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-const indexTest = tasks[1].id
-const testNow = tasks.filter((object) => {
-    object.id !== '1138465078061'
-})
-console.log(testNow)*/
+  const newTaskText = event.target.taskName.value || "";
+  if (newTaskText) {
+    const newTask = {
+      id: Date.now().toString(),
+      text: newTaskText
+    };
+    tasks.push(newTask);
+    const taskItem = createTaskItem(newTask.id, newTask.text);
+    tasksListContainer.append(taskItem);
+  }
+});
+
+const tasksListContainer = document.querySelector(".tasks-list");
+tasks.forEach((task) => {
+  const taskItem = createTaskItem(task.id, task.text);
+  tasksListContainer.append(taskItem);
+});
+*/
