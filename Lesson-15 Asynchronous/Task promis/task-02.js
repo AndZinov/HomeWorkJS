@@ -49,3 +49,32 @@ const getUserByIds = (ids) => {
         })
 }
 getUserByIds(userIds)
+
+//Решение от школы
+const getUsersByIds = (userIds) => {
+    toggleLoader();
+    Promise.all(userIds.map((id) => fetch(`${USERS_URL}/${id}`)))
+      .then((responses) => {
+        return Promise.all(
+          responses
+            .filter((response) => response.ok)
+            .map((response) => response.json())
+        );
+      })
+      .then((users) => {
+        console.log("users", users);
+        const usersArray = Array.isArray(users) ? users : Object.values(users);
+        usersArray.forEach((user) => {
+          const todoHTMLElement = createUserElement(user.name);
+          usersContainer.append(todoHTMLElement);
+        });
+      })
+      .catch((error) => {
+        console.error("error", error);
+      })
+      .finally(() => {
+        toggleLoader();
+      });
+  };
+  
+  getUsersByIds([5, 6, 2, 1]);

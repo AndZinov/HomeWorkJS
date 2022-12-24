@@ -24,9 +24,11 @@ const dataConteiner = document.querySelector('#data-container')
 
 const getTodosByIds = (ids) => {
     const request = ids.map((id) => fetch (`${TODOS_URL}/${id}`))
+    console.log('request',request)
     Promise.all(request)
         .then((responses) => {
             const dataResults = responses.map((response) => response.json());
+            console.log('dataResults', dataResults)
             return Promise.all(dataResults);
         })
         .then((todos) => {
