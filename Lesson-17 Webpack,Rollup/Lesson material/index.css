@@ -1,0 +1,11 @@
+body{
+    background: rgb(105, 105, 216);
+    padding: 0;
+    margin: 0;
+    color: azure;
+}
+
+.js-image {
+    width: 300px;
+    height: 300px;
+}
