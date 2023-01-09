@@ -8,7 +8,7 @@ module.exports = ({ development }) => ({
         contentBase: `${__dirname}/dist`,
         open: true,
         compress: true,
-        port: 4000,
+        port: 4080,
     },
     output: {
         path: `${__dirname}/dist`,
